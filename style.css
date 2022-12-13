@@ -6,6 +6,9 @@
 body {
   width: 100vw;
   height: 100vh;
+  background: #02020A;
+  color: #DBDBDB;
+  font-family: sans-serif;
 }
 
 .centered {
@@ -13,6 +16,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 #calculator {
@@ -20,15 +24,10 @@ body {
   flex-direction: column;
   width: 500px;
   border: 2px solid black;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 20px;
   gap: 20px;
-}
-
-#calculator div {
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 10px;
+  background: #05204A;
 }
 
 #display {
@@ -36,6 +35,12 @@ body {
   width: 100%;
   height: 60px;
   text-align: end;
+  background: #DBDBDB;
+  color: #02020A;
+  font-size: 24px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 #numpad {
@@ -45,7 +50,34 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(50px, auto);
   gap: 10px;
+  padding: 10px;
 }
 
-.btn {
+#numpad button {
+  background: #5D675B;
+  color: #DBDBDB;
+  border: none;
+  font-size: 20px;
+}
+
+#numpad button.operation-button {
+  background: #297373;
+}
+
+button#clear {
+  background: #A4031F;
+  color: #DBDBDB;
+}
+
+button#equals {
+  background: #EA9010;
+}
+
+#numpad button:hover {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#numpad button:active {
+  font-size: 20px;
 }
